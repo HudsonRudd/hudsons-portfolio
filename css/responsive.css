@@ -1,0 +1,193 @@
+.top_bar{
+    /*use this instead of raw vw to make it more accessability freindly so 
+    now when old people increase there web browser font size this will partailly change with it*/
+    font-size: calc(1.5rem + 3vw);
+}
+
+
+
+
+img {
+    /*this keeps img in container*/
+    width: 100%;
+}
+
+.img_container {
+    margin: 100px 400px 100px 400px;
+}
+
+
+
+
+/*all of this is making the text in the top_bar change depending on screen size*/
+.short_text {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .short_text {
+        display: inline-block;
+    }
+
+    .long_text {
+        display: none;
+    }
+}
+
+.responsive-site {
+    background-color: var(--grey);
+}
+
+
+.header {
+    
+    display: flex;
+    justify-content: space-between;
+    border: 3px solid var(--dark-gold);
+    background-color: var(--dark-grey);
+
+}
+
+
+
+
+.title-text {
+    
+    align-self: center;
+    white-space: nowrap;
+    /*this creates responsive typosgraphy but the text won't change to much because 
+    it would look in monitor or phone so I only make 0px to 800px and past that point I use different numbers*/
+    font-size: calc(1.3rem + 5vw);
+}
+
+@media (min-width: 800px) {
+
+}
+
+.link-wrapper {
+    align-self: center;
+    
+
+}
+
+.link {
+    font-size: calc(.3rem + 3vw);
+    padding: 1vw;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fill, 1fr);
+}
+
+.main-heading {
+    background-color: var(--dark-grey);
+    border: 3px solid var(--dark-gold);
+    grid-column: 1/4;
+
+}
+
+.long-heading {
+    font-size: calc(1rem + 6vw);
+}
+
+.short-heading {
+    font-size: calc(1rem + 6vw);
+}
+
+.card-container {
+    grid-row: 2;
+    grid-column: 1/4;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    border-left: 3px solid var(--dark-gold);
+    border-right: 3px solid var(--dark-gold);
+}
+
+.card {
+    margin: 30px;
+    background-color: var(--dark-gold);
+    height: calc(200px + 10vw);
+    width: calc(200px + 10vw);
+    border: 3px solid var(--dark-grey);
+}
+
+.card-heading {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    color: var(--gold);
+    background-color: var(--grey);
+ font-size: calc(1rem + 4vw);
+}
+
+.card-content {
+    padding: 10px;
+    font-size: calc(.5rem + 2vw) ;
+}
+
+.discover {
+    display: flex;
+    background-color: var(--dark-grey);
+    grid-row: 3;
+    grid-column: 1/4;
+    height: 200px;
+    justify-content: center;
+}
+
+.footer {
+    display: none;
+    grid-column: 1/4;
+    background-color: var(--dark-grey);
+    height: 100px;
+    border-left: 3px solid var(--dark-gold);
+    border-bottom: 3px solid var(--dark-gold);
+    border-top: 3px solid var(--dark-gold);
+}
+
+.long-heading {
+    display: none;
+}
+
+@media (min-width: 800px) {
+    /*this creates responsive typosgraphy but the text won't change to much because 
+    it would look in monitor or phone so I only make 0px to 800px and past that point I use different numbers*/
+    .link {
+        font-size: calc(1rem + 2vw);
+    }
+
+    .title-text {
+        font-size: calc(2rem + 3vw);
+    }
+
+    /*getting rid of short heading and making lon heading reapear*/
+    .short-heading{
+        display: none;
+    }
+    .long-heading{
+        display: inline-block;
+        font-size: calc(1.5rem + 2.5vw);
+    }
+    
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .discover {
+        grid-row: 1/4;
+        grid-column: 4;
+        height: auto;
+        border: 3px solid var(--dark-gold);
+    }
+    .card-container{
+        border-right: none;
+    }
+
+    .footer {
+        display: block;
+    }
+    
+}
+

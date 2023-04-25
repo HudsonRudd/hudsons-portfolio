@@ -1,0 +1,349 @@
+h1 {
+    color: var(--gold);
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.flexbox {
+    display: flex;
+    border: 2px solid rgb(230, 196, 0);
+    margin: 0px 50px;
+
+}
+
+.flex-1 {
+    display: flex;
+    border: 2px solid rgb(230, 196, 0);
+    /* flex is for flex-items
+    flex is shorthand for flex-shrink flex-grow flex-basis
+    the one just means give me 1 fraction of the remaining space this is for flex-grow
+    the 100px means give me at least 100px this is flex-basis*/
+    flex: 1 100px;
+    column-gap: 10px;
+}
+
+.flex-1 .flex-items:first-child {
+    order: 1;
+}
+
+
+.flex-1 .flex-items {
+    flex-grow: 1;
+}
+
+.flex-2 {
+    display: flex;
+    border: 2px solid rgb(230, 196, 0);
+    flex: 1 100px;
+    flex-flow: column wrap;
+    gap: 10px 10px;
+    justify-content: space-evenly;
+}
+
+.flex-2 .flex-items {
+    flex: 1 auto;
+}
+
+.flex-2 .flex-items:nth-child(1) {
+    flex-grow: 0;
+    align-self: flex-start;
+}
+
+.flex-2 .flex-items:nth-child(2) {
+    flex-grow: 0;
+    align-self: center;
+}
+
+.flex-2 .flex-items:nth-child(3) {
+    flex-grow: 0;
+    align-self: flex-end;
+}
+
+.flex-3 {
+    display: flex;
+    border: 2px solid rgb(230, 196, 0);
+    flex: 1 100px;
+    height: 300px;
+
+    /*one way to center in the very middle*/
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.flex-3 .flex-items {
+
+    /*one way to center in the very middle*/
+    flex: 0;
+    margin: auto;
+
+}
+
+.flex-items {
+    background-color: var(--gold);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.positioning {
+    border: 2px solid rgb(230, 196, 0);
+    margin: 0px 50px;
+}
+
+
+  p {
+    background: var(--gold);
+    border: 3px solid var(--dark-grey);
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .positioning p:nth-child(1) {
+    position: static;
+  }
+
+  .positioning p:nth-child(2) {
+    position: relative;
+    top: 10px;
+    left: 10px;
+  }
+
+  .positioning p:nth-child(3) {
+    position: static/*absolute*/;
+    top: 10px;
+    left: 10px;
+  }
+
+  .positioning p:nth-child(4) {
+    position: static/*fixed*/;
+    top: 10px;
+    left: 10px;
+  }
+
+  .positioning p:nth-child(5) {
+    position:sticky;
+    top: 10px;
+    left: 10px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1px 1fr;
+    border: 2px solid rgb(230, 196, 0);
+    margin: 0px 50px;
+}
+
+
+.grid1 {
+    grid-column: 1;
+    display: grid;
+    border-right: 2px solid rgb(230, 196, 0);
+    grid-template-columns: 1fr 2fr ;
+    grid-template-rows: 100px 100px 100px ;
+    gap: 20px;
+}
+
+.one,
+.two,
+.three,
+.four {
+    color: var(--dark-grey);
+    background-color: var(--trans-gold);
+}
+
+
+
+.one {
+    grid-row: 1;
+    grid-column: 1/3;
+   }
+   
+   .two {
+    grid-row: 2;
+    grid-column: 1;
+   }
+   
+   .three {
+    grid-row: 2;
+    grid-column: 2;
+   }
+   
+   .four {
+    grid-row: 3;
+    grid-column: 2;
+   }
+   
+   .grid2 {
+    display: grid;
+    border-right: 2px solid rgb(230, 196, 0);
+    grid-template-columns: 1fr 1fr 1fr 1fr /*repeat(auto-fill, minmax(200px, 1fr)) this creates as many columns as needed*/;
+    grid-template-rows: repeat(3,100px);
+    gap: 10px;
+    grid-column: 2;
+    grid-row: 1;
+  }
+  
+.item1,
+.item2 {
+  color: var(--dark-grey);
+    background-color: var(--trans-gold);
+}
+
+  .item1 {
+
+    grid-column: 1/4;
+    grid-row: 1/3;
+  }
+  
+  .item2 {
+    grid-column: 2/5;
+    grid-row: 2/4;
+  }
+
+  .grid3 {
+    display: grid;
+    grid-column: 4;
+    grid-row: 1;
+    justify-content: center;
+  }
+
+  .thing1 {
+    align-self: center;
+    color: var(--dark-grey);
+    background-color: var(--trans-gold);
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.floats {
+    
+    border: 2px solid var(--gold);
+    margin: 0px 50px;
+    margin-bottom: 200px;
+}
+
+
+  
+  .box {
+    width: 150px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: var(--dark-gold);
+    padding: 1em;
+    /*float makes it ignore normal flow and go to the left of any block level elements*/
+    float: left;
+    margin: 15px;
+  }
+
+  .special {
+    background-color: var(--gold);
+  padding: 10px;
+  color: var(--dark-grey);
+  }
+
+  .cleared {
+    /* this means that it will move down a line if there is a floated thing to the left of it */
+    clear:left ;
+  }
+
+  .wrapper {
+    padding: 10px;
+    color: #fff;
+    display: flow-root;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
