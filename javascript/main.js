@@ -338,7 +338,7 @@ function maybe() {
 
 
 /* LOOPS */
-
+/*
 let cats = [
 'weird',
 'hairless',
@@ -380,7 +380,7 @@ function endsWithD(cat) {
 let filteredCats = cats.filter(endsWithD)
 
 console.log(filteredCats)
-
+*/
 
 const hoverEffect = document.querySelector('.hover-effect');
 let mouseX = 0;
@@ -410,6 +410,12 @@ document.addEventListener('mouseenter', () => {
 document.addEventListener('mouseleave', () => {
   hoverEffect.style.opacity = 0;
 });
+
+
+
+
+
+
 
 
 

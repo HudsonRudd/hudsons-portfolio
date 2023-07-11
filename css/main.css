@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Comfortaa&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Chela+One&family=Comfortaa&family=Varela+Round&display=swap');
 :root {
     --dark-gold: rgb(172, 146, 0);
     --gold: rgb(230, 196, 0);
@@ -11,6 +13,7 @@
     box-sizing: border-box;
     color: var(--grey);
     font-family: impact, sans-serif;
+
 }
 
 
@@ -237,7 +240,194 @@ a {
     padding-right: 70px;
   }
 
+  .Sunny-Side-Art {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 10000px
+  }
 
+  .sunny-side-art-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 
+  .about-me-header {
+    color: var(--dark-gold);
+    font-weight: 70;
+    text-align: center;
+    margin: 0px;
+    font-family: 'Chela One', cursive;
+    font-size: calc(2vw + 5px);
+  }
+
+  .about-me-text {
+    font-size: calc(1vw + 5px);
+    color: var(--dark-gold);
+    text-align: center;
+    font-family: 'Varela Round', sans-serif;
+  }
+
+  .about-me {
+    transition: all .8s ease;
+    margin-left: 0vw;
+    margin-right: 0vw;
+    padding: 40px;
+    border-radius: 70px;
+    font-size: 100px;
+  }
   
+  .about-me.transformed {
+    transform: scale(1.25);
+    margin: 5vw 20vw;
+    background-color: var(--dark-gold);
+   
+  }
+
+  .about-me.transformed .about-me-text {
+   color: var(--dark-grey);
+   
+  }
+
+  .about-me.transformed .about-me-header {
+    color: var(--grey);
+    
+   }
+  
+
+   .dropdown {
+    position: relative;
+    display: inline-block;
+    
+  }
+  
+  .dropdown-btn {
+   
+    border: none;
+   
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    position: relative;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 1s ease;
+  }
+  
+  .dropdown-content a {
+    display: block;
+    
+    text-decoration: none;
+    
+  }
+  
+  .dropdown:hover .dropdown-content {
+    max-height: 700px; /* Adjust this value to set the desired height */
+  }
+
+  .dropdown:hover .big-button{
+    border: 6px var(--dark-gold) solid;
+    background-color: var(--grey);
+    color: var(--gold);
+    transform: scale(1.25);
+  }
+
+  .arrow {
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(180deg);
+    font-size: 80px;
+   
+  }
+  
+  .dropdown:hover .arrow {
+    transform: rotate(0deg);
+  }
+  
+ .sunny-side {
+  font-size: 100px;
+  text-align: center;
+
+
+ }
+
+  .sunny-side .big-button:hover {
+  color: var(--dark-grey);
+  background-color: var(--dark-gold);
+  border-color: var(--gold);
+  text-decoration: underline;
+  transform: scale(1)
+ }
+
+ 
+ .about-work.transformed {
+  transform: scale(1.25);
+  margin-left: 20vw;
+  margin-right: 20vw;
+  margin-bottom: 20vw;
+  margin-top: 10vw;
+  background-color: var(--dark-gold);
+ 
+}
+
+.about-work.transformed .about-me-text {
+ color: var(--dark-grey);
+ 
+}
+
+.about-work.transformed .about-me-header {
+  color: var(--grey);
+  
+ }
+
+ .about-work {
+  transition: all .8s ease;
+    margin-left: 0vw;
+    margin-right: 0vw;
+    padding: 40px;
+    border-radius: 70px;
+    font-size: 100px;
+    margin-bottom: 20vw;
+    margin-top: 10vw;
+
+}
+
+
+@media (max-width: 1040px) {
+
+
+.top_bar {
+  font-size: calc(5vw + 20px);
+}
+
+.about-me, .about-work {
+  padding: 15px;
+  border-radius: 50px;
+}
+
+
+}
+
+.big-button {
+ margin: 4vw 12vw;
+}
+
+.arrow {
+  font-size: 10vw;
+}
+
+.dropdown .big-button {
+  transform: scale(.8)
+}
+
+.dropdown:hover .big-button {
+  transform: scale(1)
+}
+
+.dropdown-content:hover .big-button {
+  transform: scale(1)
+}
 
