@@ -275,11 +275,13 @@ a {
     padding: 40px;
     border-radius: 70px;
     font-size: 100px;
+    margin-bottom: 10vw;
+    margin-top: 10vw;
   }
   
   .about-me.transformed {
     transform: scale(1.25);
-    margin: 5vw 20vw;
+    margin: 10vw 15vw;
     background-color: var(--dark-gold);
    
   }
@@ -365,8 +367,8 @@ a {
  
  .about-work.transformed {
   transform: scale(1.25);
-  margin-left: 20vw;
-  margin-right: 20vw;
+  margin-left: 15vw;
+  margin-right: 15vw;
   margin-bottom: 20vw;
   margin-top: 10vw;
   background-color: var(--dark-gold);
@@ -429,5 +431,41 @@ a {
 
 .dropdown-content:hover .big-button {
   transform: scale(1)
+}
+
+.green {
+  color: rgb(23, 218, 23);
+  transition: color .5s ease-in-out;
+}
+
+.green:hover {
+  color: rgb(0, 97, 0);
+}
+
+.image-container {
+  height: calc(15vw + 50px);
+  width: calc(15vw + 50px);
+  overflow: hidden;
+  border-radius: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform .5s ease-in-out;
+  margin-top: 30px;
+}
+
+img[src="images/me-before.jpg"] {
+  border-radius: 1000px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  transition: transform .5s ease-in-out;
+}
+
+img[src="images/me-before.jpg"]:hover {
+  transform: scale(1.05);
+}
+
+.image-container:hover {
+  transform: scale(1.10);
 }
 
