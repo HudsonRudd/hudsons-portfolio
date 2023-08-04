@@ -275,13 +275,13 @@ a {
     padding: 40px;
     border-radius: 70px;
     font-size: 100px;
-    margin-bottom: 10vw;
-    margin-top: 10vw;
+    margin-bottom: 5vw;
+    margin-top: 5vw;
   }
   
   .about-me.transformed {
     transform: scale(1.25);
-    margin: 10vw 15vw;
+    margin: 5vw 15vw;
     background-color: var(--dark-gold);
    
   }
