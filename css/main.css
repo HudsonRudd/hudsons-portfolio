@@ -25,6 +25,14 @@ body {
     background-color: rgb(93, 93, 93);
 }
 
+@media (max-width: 870px) {
+  body {
+    padding-bottom: 300px
+  }
+}
+  
+
+
 .top_bar {
     margin-top: 25px;
   margin-bottom: 60px;
