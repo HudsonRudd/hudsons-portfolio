@@ -20,6 +20,7 @@
 
 body {
     margin: 0px;
+    padding-bottom: 500px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: rgb(93, 93, 93);
 }
